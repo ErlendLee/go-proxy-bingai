@@ -1,16 +1,18 @@
 # go-proxy-bing
 
-一个用 GO 写的微软 Bing AI 的代理服务。 使用微软原始页面简单定制，基本兼容微软 Bing AI 所有功能，无需登录即可畅聊。
+一个用 GO 写的微软 Bing AI 的魔法服务。 使用微软原始页面简单定制，基本兼容微软 Bing AI 所有功能，无需登录即可畅聊。
 
-⭐ 国内可用
+⭐ 国内可用 （部署服务器需要直连 www.bing.com 不重定向 CN 才行）
 
 ⭐ 无需登录即可畅聊
 
-⭐ 需要画图等高级功能时，可登录微软账号设置用户Cookie进行体验
+⭐ 需要画图等高级功能时，可登录微软账号设置用户 Cookie 进行体验
 
 ⭐ 遇到一切问题，先点左下角 ![新主题](./docs/img/bing-clear.png) 试试，不行使用刷新大法（Shift + F5 或 Ctrl + Shift + R 或 右上角设置中的重置），最终大招就 清理浏览器缓存 及 Cookie ，比如（24小时限制、未登录提示等等）
 
 - [go-proxy-bing](#go-proxy-bing)
+	- [网页展示](#网页展示)
+	- [侧边栏](#侧边栏)
 	- [演示站点](#演示站点)
 	- [获取Cookie](#获取Cookie)
 	- [部署](#部署)
@@ -18,7 +20,11 @@
 		- [Release](#Release)
 		- [Railway](#Railway)
 		- [Vercel](#Vercel)
-    
+		- [Render](#Render)
+	- [TODO](#TODO)
+
+## 网页展示
+
 - 电脑端未登录状态
 
 ![电脑未登录](./docs/img/bing-nologin.png)
@@ -37,6 +43,16 @@
 
 ![手机端未登录](./docs/img/bing-m-nologin.png)
 
+## 侧边栏
+
+- 在 Edge 浏览器可把聊天和撰写分别添加侧边栏
+
+![添加侧边栏](./docs/img/sidebar-add.png)
+
+![聊天](./docs/img/sidebar-chat.png)
+
+![撰写](./docs/img/sidebar-compose.png)
+
 ## 演示站点
 
 ### 甲骨文小鸡仔，轻虐
@@ -53,7 +69,13 @@
 
 - https://bing-vercel.vcanbb.top
 
-- https://go-proxy-bingai-vercel.vercel.app
+- https://go-proxy-bingai-git-master-adams549659584.vercel.app
+
+### Render搭建
+
+- https://bing-render.vcanbb.top
+
+- https://go-proxy-bingai.onrender.com
 
 ## 获取Cookie
 
@@ -69,7 +91,7 @@
 
 > 需 https 域名 (自行配置 nginx 等)
 
-> 支持 Linux (amd64 / arm64)
+> 支持 Linux (amd64 / arm64)、Windows (amd64 / arm64)
 
 ### Docker
 
@@ -111,3 +133,21 @@ RAILWAY_DOCKERFILE_PATH=docker/Dockerfile
 ![Vercel 一键部署](./docs/img/vercel-1.png)
 
 ![Vercel 域名](./docs/img/vercel-2.png)
+
+### Render
+
+一键部署，点这里 => [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/adams549659584/go-proxy-bingai)
+
+![Render 一键部署](./docs/img/render-1.png)
+
+![Render 域名](./docs/img/render-2.png)
+
+
+## TODO
+
+- [ ] 撰写
+- [ ] Vue3 重构
+- [ ] 提示词
+- [ ] 保存历史消息
+- [ ] 导出消息到本地（Markdown、图片、PDF）
+- [ ] 简单访问权限控制
